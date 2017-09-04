@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <!-- Include Editor style. -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img {
+            height: 500px;
+            width: 500px;
+            display: block;
+            margin: 15px auto;
+            border: 1px solid #ccc;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start content -->
+    <!-- end content -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <script>
+        let gallery = document.createElement('img');
+        let images = ["Capture.JPG", "news.JPG", "02.jpg", "profile.jpg", "bootstrap.JPG", "pay.JPG", "animation.JPG", "template4.JPG", "windows.JPG"];
+        let i = 0;
+        let random = Math.floor(Math.random() * images.length);
+        gallery.src = images[random];
+        document.body.appendChild(gallery);
+        setInterval(function () {
+            gallery.src = images[i];
+            i++;
+            if (i == images.length) {
+                i = 0;
+            }
+        }, 3000);
+    </script>
+</body>
+
+</html>
